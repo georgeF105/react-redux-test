@@ -4,6 +4,7 @@ import ShoppingCart from '../ShoppingCart'
 
 const mapStateToProps = (state) => {
 	return { 
+		products: state.products,
 		cartItems: state.cartItems
 	}
 }

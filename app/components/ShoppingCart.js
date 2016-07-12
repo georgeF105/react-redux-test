@@ -1,10 +1,9 @@
 import React from 'react'
 import ShoppingCartItem from './ShoppingCartItem';
+import buildCartItems from '../lib/buildCartItems';
 
 export default (props) => {
-	const products  = props.cartItems.map( (product) => {
-		return <ShoppingCartItem key={product.id} product={product} />
-	})
+	const products  = buildCartItems(props).map(p => {return <ShoppingCartItem key={p.id} product={p} />})
 	return (
 		<table className="cart-list-table">
 			<tbody>

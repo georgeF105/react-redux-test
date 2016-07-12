@@ -11,8 +11,8 @@ export default (props) => {
 
 
 	// return cartItems.find(item => item.id === 1)
-	return products.filter(p => {return findCartQyt(cartItems, p.id)})
-		.map(p => {return Object.assign({}, p, {qyt:findCartQyt(cartItems,p.id)}, {total:p.price * findCartQyt(cartItems,p.id)})})
+	return products && cartItems ? products.filter(p => findCartQyt(cartItems, p.id))
+		.map(p => Object.assign({}, p, {qyt:findCartQyt(cartItems,p.id)}, {total:p.price * findCartQyt(cartItems,p.id)})) : []
 }
 
 const findCartQyt = (cartItems, id) => {
