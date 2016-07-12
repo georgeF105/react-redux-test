@@ -29,10 +29,18 @@ body {
 }
 
 .product-list-table {
-  border: 2px solid black;
+  border-right: 2px solid black;
   margin-top:30px;
   width: 60%;
   float:left;
+  font-size: 20px;
+  padding:10px;
+}
+
+.cart-list-table {
+  margin-top:30px;
+  width: 40%;
+  float:right;
   font-size: 20px;
   padding:10px;
 }
