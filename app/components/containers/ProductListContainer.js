@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 
 import ProductList from '../ProductList'
+import { addItemToCart } from '../../actions'
 
 const mapStateToProps = (state) => {
 	return { 
@@ -8,6 +9,14 @@ const mapStateToProps = (state) => {
 	}
 }
 
-const ProductListContainer = connect(mapStateToProps)(ProductList)
+const mapDispatchToProps = (dispatch) => {
+	return {
+		addItemToCart: (id) => {
+			dispatch(addItemToCart(id))
+		}
+	}
+}
+
+const ProductListContainer = connect(mapStateToProps,mapDispatchToProps)(ProductList)
 
 export default ProductListContainer

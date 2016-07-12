@@ -19,8 +19,11 @@ const INITAL_STATE = {
 export default (state = INITAL_STATE, action) => {
 	switch(action.type) {
 		case 'ADD_PRODUCT':
-			console.log('ADD_PRODUCT id', action.id)
-			return state 
+			console.log('ADD_PRODUCT id:', action.id)
+			return state
+		case 'ADD_TO_CART':
+			console.log('ADD_PRODUCT id:', action.id)
+			return state  
 		case 'LOGIN':
 			const logInHeaderInfo = Object.assign({}, state.headerInfo, {loggedIn:true,userName:action.email})
 			return Object.assign({}, state, {headerInfo: logInHeaderInfo})

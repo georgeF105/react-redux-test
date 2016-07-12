@@ -3,7 +3,7 @@ import ProductDetail from './ProductDetail';
 
 export default (props) => {
 	const products  = props.products.map( (product) => {
-		return <ProductDetail key={product.id} product={product} />
+		return <ProductDetail key={product.id} product={product} addItemToCart={props.addItemToCart}/>
 	})
 	return (
 		<table className="product-list-table">

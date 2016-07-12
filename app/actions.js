@@ -12,3 +12,11 @@ export function logOut () {
 		type: 'LOGOUT'
 	}
 }
+
+
+export function addItemToCart (id) {
+	return {
+		type: 'ADD_TO_CART',
+		id: id
+	}
+}
